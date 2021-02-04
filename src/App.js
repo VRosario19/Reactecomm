@@ -1,17 +1,21 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./Component/HomePage/HomePage.js";
-import ProductsPage from "./Component/ProductsPage/ProductsPage.js";
+import AllProducts from "./Component/Product/AllProducts";
+import Contact from "./Component/Form/Form";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="navbar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/Home">Home</Link>
           </li>
           <li>
-            <Link to="/Products">Products</Link>
+            <Link to="/Products"> All Products</Link>
+          </li>
+          <li>
+            <Link to="/Contact"> Contact Us</Link>
           </li>
         </ul>
 
@@ -25,11 +29,14 @@ function App() {
         of them to render at a time
       */}
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/Home">
             <HomePage />
           </Route>
           <Route path="/Products">
-            <ProductsPage />
+            <AllProducts />
+          </Route>
+          <Route path="/Contact">
+            <Contact />
           </Route>
         </Switch>
       </div>

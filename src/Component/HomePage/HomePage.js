@@ -1,44 +1,26 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import Slider from "react-slick";
+import Footer from "../Footer/Footer";
 import "./HomePage.css";
-import images from "./images/Household.jpg";
+import Slider from "./Slider";
 
 const HomePage = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
   return (
-    <Slider {...settings}>
-      <div>
+    <>
+      <div id="heroprod">
         <img
-          className="Household"
-          src={"./Components/images/Household.jpg"}
-          alt=""
+          className="prodhero"
+          src="https://images.unsplash.com/photo-1465256410760-10640339c72c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+          alt="Oaxaca wallpaper"
         />
+
+        <p className="herotext">From our hands to your door</p>
       </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+      <h1 className="quote">
+        "The beauty of the world lies in the diversity of its people"
+      </h1>
+      <Slider />
+      <Footer />
+    </>
   );
 };
 
