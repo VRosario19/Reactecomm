@@ -16,11 +16,12 @@ const Footer = () => {
           </a>
         </span>
         <span className="icon">
-          <a href="https://www.instagram.com/">
+          <a href="https://www.instagram.com">
             <i className="fa fa-instagram fa-lg" aria-hidden="true"></i>
           </a>
         </span>
       </div>
+
       <p>&#169; Artesenias Vanessa</p>
     </div>
   );

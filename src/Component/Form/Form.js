@@ -2,6 +2,9 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import "./Form.css";
 
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +15,15 @@ class Form extends React.Component {
       text: "",
     };
   }
+
+  // myChangeHandler = (event) => {
+  //   let em = event.target.name;
+  //   let val = event.target.value;
+  //   if (em === "name") {
+  //     alert("Enter a Valid Response");
+  //   }
+  //   this.setState({ [em]: val });
+  // };
 
   render() {
     return (
@@ -25,6 +37,7 @@ class Form extends React.Component {
             type="text"
             className="input"
             placeholder="Email"
+            // onChange={this.myChangeHandler}
           />
 
           <textarea
@@ -40,5 +53,15 @@ class Form extends React.Component {
     );
   }
 }
+// function App(){
+//   const notify = () => toast("Wow so easy!");
+
+//   return (
+//     <div>
+//       <button onClick={notify}>Notify!</button>
+//       <ToastContainer />
+//     </div>
+//   );
+// }
 
 export default Form;
